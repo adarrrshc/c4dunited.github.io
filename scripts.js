@@ -81,7 +81,7 @@ function sharebutton() {
 
   localStorage.setItem("credits", p);
   //window.open("https://api.whatsapp.com/send?text=t.me/projectupdates");
-  window.location.href ="https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://www.hotstarpremium.tk, Give it a try.";
+  window.location.href ="https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try.";
   document.getElementById("credits").innerHTML =
     "Credits:" + localStorage.getItem("credits");
 }
