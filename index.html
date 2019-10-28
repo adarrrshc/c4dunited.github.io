@@ -1,0 +1,160 @@
+<html lang="en">
+  <head>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151010949-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151010949-1');
+</script>
+
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HotstarBot</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="scripts.js"></script>
+
+    <script>
+      //local storage loading
+      if(localStorage.credits)
+      {console.log("old");}
+      else{console.log("new");localStorage.setItem("credits", 1);}
+    </script>
+
+  </head>
+  <body>
+
+    <div class="nav">
+      <h1>HOTSTAR BOT</h1>
+    </div>
+
+    <div>
+      <fieldset>
+        <legend>HOTSTARBOT</legend>
+        <h2>What is HotstarBot?</h2>
+        <p>
+          Hotstar Bot(<a href="https://t.me/hottstarbot">telegram version</a>)
+          is used to generate <b>GUARANTEED TO LOGIN PREMIUM</b>
+          username and password for Hotstar account that is currently not
+          <b>STREAMING!</b>.Use <strong>Credits</strong> to Generate Accounts!.
+        </p>
+
+        <p>
+          <p class="credits" id="credits"></p>
+          <p style="color:#7fff00">Share to gain credits</p>
+          <button onclick="getuseridpass()" id="generatebutton">Generate</button>
+          <button id="sharebutton" onclick="sharebutton()">Share</button>
+          
+        </p>
+
+        <!--account type-->
+        <label>Choose an Account type</label>
+        <div>
+          <input
+            type="radio"
+            id="1"
+            name="account_type"
+            value="premium"
+            checked
+          />
+          <label for="john">Premium</label>
+
+          <input type="radio" id="2" name="account_type" value="vip" />
+          <label for="john">Vip</label>
+
+          <input type="radio" id="3" name="account_type" value="sportspack" />
+          <label for="john">Sportspack</label>
+        </div>
+
+        <br />
+        <!--credentials display-->
+        <div id="credentials" style="visibility:visible">
+          <label for="email">Email</label>
+          <input
+            onclick="copyToClipboard('email')"
+            readonly=""
+            name="id"
+            id="email"
+            value="hotstar username"
+          />
+
+          <label for="password">Password</label>
+          <input
+            onclick="copyToClipboard('password')"
+            readonly=""
+            name="id"
+            id="password"
+            value="hotstar password"
+          />
+
+          <!--toast-->
+          <p class="toast" id="toast" style="visibility: visible">
+            click username/password to copy
+          </p>
+        </div>
+      </fieldset>
+    </div>
+    <fieldset>
+      <legend>INSTRUCTIONS</legend>
+      <h2>How to use Hotstar Bot?</h2>
+
+      <p>
+        <strong> Hotstar Download</strong> - First of you need to download and
+        <a
+          href="https://play.google.com/store/apps/details?id=in.startv.hotstar&hl=en_IN"
+          >install</a
+        >
+        Hotstar from Google Playstore.Select your preferred Premium Hotstar
+        account type from radio buttons.Smash that
+        <strong>Generate</strong> Button and wait for your Premium account to be
+        displayed in respective fields.
+        <br />
+        <img src="bannerimage.jpg" alt="Example kitten" />
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>WHY HOTSTAR</legend>
+      <h2>Why Choose Hotstar?</h2>
+      <p>
+        Hotstar is a very popular video streaming platform that is used to
+        stream or watch shows ranging from international to regional that
+        include your favourites like 'Big Bang Theory','Modern Family','Game of
+        Thrones' and not to miss indian hindi serials like 'Yeh Rishta Kya
+        Kehlata Hai'and 'koffee with karan'and never ending list of movies and
+        shows in 17 different languages!!. Hotstar also streams global sports
+        events like IPL Cricket,Fotball and kabaddi and many more.Tv series and
+        serials can be streamed live anywhere and anytime. Disney recently
+        acquired Hotstar, so all premium content from Disney Universe will
+        eventually end up in Hotstar, this makes Hotstar one one the best online
+        streaming platforn that runs on Android as well as ios.
+      </p>
+    </fieldset>
+    <h2>Contact Us</h2>
+    <address>
+      <a href="mailto:pycoderit@gmail.com">pycoderit@gmail.com</a><br />
+    </address>
+    <h2>Privacy Policy</h2>
+    <privacypolicy>
+      <a href="./privacypolicy.html">privacy policy</a><br />
+    </privacypolicy>
+
+
+
+    <script>
+      document.getElementById("credits").innerHTML = "Credits:"+localStorage.getItem("credits"); 
+    </script>
+
+
+  </body>
+</html>
