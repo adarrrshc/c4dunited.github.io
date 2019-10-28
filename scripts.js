@@ -33,7 +33,7 @@ function getuseridpass() {
     id.style.color = "red";
     password.style.color = "red";
   } else {
-    fetch(window.location.href + "api/v1/credentials?type=" + packdetails)
+    fetch("https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" + packdetails)
       .then(response => {
         console.log(response);
         return response.json();
