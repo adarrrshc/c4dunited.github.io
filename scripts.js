@@ -33,7 +33,10 @@ function getuseridpass() {
     id.style.color = "red";
     password.style.color = "red";
   } else {
-    fetch("https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" + packdetails)
+    fetch(
+      "https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" +
+        packdetails
+    )
       .then(response => {
         console.log(response);
         return response.json();
@@ -81,9 +84,20 @@ function sharebutton() {
 
   localStorage.setItem("credits", p);
   //window.open("https://api.whatsapp.com/send?text=t.me/projectupdates");
-  window.location.href ="https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try.";
+  window.location.href =
+    "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try.";
   document.getElementById("credits").innerHTML =
     "Credits:" + localStorage.getItem("credits");
 }
 
 //Hi there! This website gives HOTSTAR PREMIUM for FREE!.Do check it out,Click here hotstarpremium.tk. #Hotstar
+
+function twoxcredit() {
+  var p = parseInt(localStorage.getItem("credits")) + 2;
+
+  localStorage.setItem("credits", p);
+  //window.open("https://api.whatsapp.com/send?text=t.me/projectupdates");
+  window.location.href = "http://deloplen.com/afu.php?zoneid=2905837";
+  document.getElementById("credits").innerHTML =
+    "Credits:" + localStorage.getItem("credits");
+}
