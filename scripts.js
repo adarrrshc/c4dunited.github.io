@@ -93,7 +93,8 @@ function sharebutton() {
 
 function twoxcredit() {
   //window.open("https://api.whatsapp.com/send?text=t.me/projectupdates");
-  window.location.href = "http://deloplen.com/afu.php?zoneid=2905837";
+  //window.location.href = "http://deloplen.com/afu.php?zoneid=2905837";
+  window.open("http://deloplen.com/afu.php?zoneid=2905837");
 
   setTimeout(function() {
     increase_credit(2);
