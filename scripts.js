@@ -80,24 +80,29 @@ function copyToClipboard(id) {
 }
 
 function sharebutton() {
-  var p = parseInt(localStorage.getItem("credits")) + 1;
-
-  localStorage.setItem("credits", p);
   //window.open("https://api.whatsapp.com/send?text=t.me/projectupdates");
   window.location.href =
     "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try.";
-  document.getElementById("credits").innerHTML =
-    "Credits:" + localStorage.getItem("credits");
+
+  setTimeout(function() {
+    increase_credit(1);
+  }, 3000);
 }
 
 //Hi there! This website gives HOTSTAR PREMIUM for FREE!.Do check it out,Click here hotstarpremium.tk. #Hotstar
 
 function twoxcredit() {
-  var p = parseInt(localStorage.getItem("credits")) + 2;
-
-  localStorage.setItem("credits", p);
   //window.open("https://api.whatsapp.com/send?text=t.me/projectupdates");
   window.location.href = "http://deloplen.com/afu.php?zoneid=2905837";
+
+  setTimeout(function() {
+    increase_credit(2);
+  }, 3000);
+}
+
+function increase_credit(c) {
+  var p = parseInt(localStorage.getItem("credits")) + c;
+  localStorage.setItem("credits", p);
   document.getElementById("credits").innerHTML =
     "Credits:" + localStorage.getItem("credits");
 }
