@@ -80,9 +80,9 @@ function copyToClipboard(id) {
 }
 
 function sharebutton() {
-  //window.open("https://api.whatsapp.com/send?text=t.me/projectupdates");
-  window.location.href =
-    "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try.";
+  window.open("https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try.");
+  //window.location.href =
+  //  "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, //Give it a try.";
 
   setTimeout(function() {
     increase_credit(1);
