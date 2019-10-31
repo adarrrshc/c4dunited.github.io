@@ -26,7 +26,7 @@ _pop.push(["topmostLayer", false]);
 })();
 /*]]>/* */
 //<!-- PopAds.net Popunder Code End -->
-<!--ad blocker-->
+<!--ad blocker
 document.addEventListener('DOMContentLoaded', init, false);
 
 function init(){
@@ -61,6 +61,8 @@ function adsBlocked(callback){
     callback(true)
   });
 }
+
+-->
 <!--Adblocker Ends -->
 // Place this code snippet near the footer of your page before the close of the /body tag
 // LEGAL NOTICE: The content of this website and all associated program code are protected under the Digital Millennium Copyright Act. Intentionally circumventing this code may constitute a violation of the DMCA.
