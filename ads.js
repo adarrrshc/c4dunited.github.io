@@ -30,7 +30,6 @@ _pop.push(["topmostLayer", false]);
 // Place this code snippet near the footer of your page before the close of the /body tag
 // LEGAL NOTICE: The content of this website and all associated program code are protected under the Digital Millennium Copyright Act. Intentionally circumventing this code may constitute a violation of the DMCA.
 
-/*
 eval(
   (function(p, a, c, k, e, d) {
     e = function(c) {
@@ -70,4 +69,3 @@ eval(
     {}
   )
 );
-*/
