@@ -26,7 +26,44 @@ _pop.push(["topmostLayer", false]);
 })();
 /*]]>/* */
 //<!-- PopAds.net Popunder Code End -->
+<!--ad blocker
+document.addEventListener('DOMContentLoaded', init, false);
 
+function init(){
+  adsBlocked(function(blocked){
+    if(blocked){
+      document.getElementById('result').innerHTML = 'ads are blocked';
+	  alert("ad blocker is enabled");
+    } else {
+      document.getElementById('result').innerHTML = 'ads are not blocked';
+	  alert("ad blocker is disabled");
+    }
+  })
+}
+
+function adsBlocked(callback){
+  var testURL = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+
+  var myInit = {
+    method: 'HEAD',
+    mode: 'no-cors'
+  };
+
+  var myRequest = new Request(testURL, myInit);
+
+  fetch(myRequest).then(function(response) {
+    return response;
+  }).then(function(response) {
+    console.log(response);
+    callback(false)
+  }).catch(function(e){
+    console.log(e)
+    callback(true)
+  });
+}
+
+-->
+<!--Adblocker Ends -->
 // Place this code snippet near the footer of your page before the close of the /body tag
 // LEGAL NOTICE: The content of this website and all associated program code are protected under the Digital Millennium Copyright Act. Intentionally circumventing this code may constitute a violation of the DMCA.
 /*

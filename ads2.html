@@ -1,0 +1,55 @@
+<html>
+	<head>
+	    <script src="./ads.js" async data-cfasync="false" charset="utf-8"></script>
+	<style>
+  #result {
+  font-size: 2rem;
+  font-family: monospace;
+}
+</style>
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>INSTRUCTIONS</legend>
+      <h2>How to use Hotstar Bot?</h2>
+	  </fieldset>
+
+<div id="result">
+</div>
+<script>
+	function init(){
+  adsBlocked(function(blocked){
+    if(blocked){
+      document.getElementById('result').innerHTML = 'ads are blocked';
+    } else {
+      document.getElementById('result').innerHTML = 'ads are not blocked';
+    }
+  })
+}
+
+function adsBlocked(callback){
+  var testURL = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+
+  var myInit = {
+    method: 'HEAD',
+    mode: 'no-cors'
+  };
+
+  var myRequest = new Request(testURL, myInit);
+
+  fetch(myRequest).then(function(response) {
+    return response;
+  }).then(function(response) {
+    console.log(response);
+    callback(false)
+  }).catch(function(e){
+    console.log(e)
+    callback(true)
+  });
+}
+init();
+</script>
+		
+	  </body>
+</html>
