@@ -80,7 +80,9 @@ function copyToClipboard(id) {
 }
 
 function sharebutton() {
-  window.open("https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try.");
+  window.open(
+    "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try."
+  );
   //window.location.href =
   //  "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, //Give it a try.";
 
@@ -94,11 +96,12 @@ function sharebutton() {
 function twoxcredit() {
   //window.open("https://api.whatsapp.com/send?text=t.me/projectupdates");
   //window.location.href = "http://deloplen.com/afu.php?zoneid=2905837";
-  window.open("http://deloplen.com/afu.php?zoneid=2905837");
+  //window.open("http://deloplen.com/afu.php?zoneid=2905837");
 
   setTimeout(function() {
     increase_credit(2);
-  }, 3000);
+    window.location.reload(true);
+  }, 200);
 }
 
 function increase_credit(c) {
