@@ -99,7 +99,7 @@
         <p>
           <p class="credits" id="credits"></p>
           <p style="color:#7fff00">Share to gain 1 credit, Creditx2 to get 2 credits</p>
-          <button onclick="getuseridpass()" id="generatebutton" style="background-color: red">Generate</button>
+          <button onclick="getuseridpass()" id="generatebutton" style="background-color: red;border-block-color: red">Generate</button>
           <button id="sharebutton" onclick="sharebutton()">Share</button>
           <button id="creditx2" onclick="twoxcredit()">Creditx2</button>
           
@@ -200,7 +200,7 @@
 
     <script>
       document.getElementById("credits").innerHTML = "Credits:"+localStorage.getItem("credits"); 
-      window.location.reload(true)
+
     </script>
 
   </body>
