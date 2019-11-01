@@ -35,10 +35,10 @@ function init() {
   adsBlocked(function(blocked) {
     if (blocked) {
       document.getElementById("result").innerHTML = "ads are blocked";
-      alert("ad blocker is enabled");
+      //alert("ad blocker is enabled");
     } else {
       document.getElementById("result").innerHTML = "ads are not blocked";
-      alert("ad blocker is disabled");
+      //alert("ad blocker is disabled");
     }
   });
 }
