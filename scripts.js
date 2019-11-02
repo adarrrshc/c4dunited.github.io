@@ -5,6 +5,7 @@ function getuseridpass() {
     generate_but = document.getElementById("generatebutton");
     generate_but.innerText = "Generating..please wait..";
     toast = document.getElementById("toast");
+    details = document.getElementById("account_details");
 
     //account type finding
     accounttype = document.getElementsByName("account_type");
@@ -46,7 +47,9 @@ function getuseridpass() {
                 console.log("here");
                 id.value = data["email"];
                 password.value = data["password"];
+                details.innerText = data["details"] + " " + data["expiry"]
                 generate_but.innerText = "Generate";
+
 
                 localStorage.setItem("credits", p - 1);
                 document.getElementById("credits").innerHTML =
@@ -60,6 +63,7 @@ function getuseridpass() {
                 generate_but.innerText = "Generate";
                 id.value = "Ooops";
                 password.value = "Try Again";
+                details.innerText = "Share to gain 1 credit, Creditx2 to get 2 credits"
             });
     }
 }
@@ -70,7 +74,7 @@ function copyToClipboard(id) {
     /* Select the text field */
     copyGfGText.select();
 
-    toast.innerText = id + " copied...";
+    toast.innerText = id + " copied.";
     /* Copy the text inside the text field */
     document.execCommand("copy");
     toast.style.visibility = "visible";
