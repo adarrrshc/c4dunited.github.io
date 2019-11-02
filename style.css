@@ -16,7 +16,7 @@ fieldset {
 }
 
 
-body {
+html,body {
   overflow-x: hidden;
   background-color: #101820;
   color: #d8d8e0;
