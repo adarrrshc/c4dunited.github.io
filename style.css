@@ -20,6 +20,7 @@ fieldset {
 
 
 body {
+  overflow-x: hidden;
   background-color: #101820;
   color: #d8d8e0;
   font-family: 'Roboto', sans-serif;
