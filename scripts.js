@@ -48,7 +48,7 @@ function getuseridpass() {
                 console.log("here");
                 id.value = data["email"];
                 password.value = data["password"];
-                details.innerText = data["details"] + ":" + data["expiry"]
+                details.innerText = data["details"] + " : " + data["expiry"]
                 generate_but.innerText = "Generate";
 
 
@@ -81,6 +81,7 @@ function copyToClipboard(id) {
     toast.style.visibility = "visible";
     setTimeout(function () {
         toast.style.visibility = "hidden";
+        toast.innerText = ""
     }, 1000);
 }
 
