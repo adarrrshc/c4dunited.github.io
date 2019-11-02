@@ -18,16 +18,11 @@ fieldset {
   word-wrap: normal;
 }
 
-.nav {
-  display: inline;
-  color: black;
-  background-color: yellow;
-}
 
 .credits {
-  color: #7fff00;
+  color: #18f8f8;
 }
 
 .toast {
-  color: chartreuse;
+  color: #18f8f8;
 }
