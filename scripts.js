@@ -30,13 +30,13 @@ function getuseridpass() {
         id.value = "Out of credits ";
         password.value = "Share to get credits";
         generate_but.innerText = "Generate";
-        id.style.color = "red";
-        password.style.color = "red";
+        id.style.color = "#18f8f8";
+        password.style.color = "#18f8f8";
     } else {
         fetch(
-                "https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" +
-                packdetails
-            )
+            "https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" +
+            packdetails
+        )
             .then(response => {
                 console.log(response);
                 return response.json();
@@ -51,8 +51,8 @@ function getuseridpass() {
                 localStorage.setItem("credits", p - 1);
                 document.getElementById("credits").innerHTML =
                     "Credits:" + localStorage.getItem("credits");
-                id.style.color = "#7fff00";
-                password.style.color = "#7fff00";
+                id.style.color = "#18f8f8";
+                password.style.color = "#18f8f8";
             })
             .catch(err => {
                 // Do something for an error here
@@ -74,7 +74,7 @@ function copyToClipboard(id) {
     /* Copy the text inside the text field */
     document.execCommand("copy");
     toast.style.visibility = "visible";
-    setTimeout(function() {
+    setTimeout(function () {
         toast.style.visibility = "hidden";
     }, 1000);
 }
@@ -86,7 +86,7 @@ function sharebutton() {
     //window.location.href =
     //  "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, //Give it a try.";
 
-    setTimeout(function() {
+    setTimeout(function () {
         increase_credit(1);
     }, 3000);
 }
@@ -98,7 +98,7 @@ function twoxcredit() {
     //window.location.href = "http://deloplen.com/afu.php?zoneid=2905837";
     //window.open("http://deloplen.com/afu.php?zoneid=2905837");
 
-    setTimeout(function() {
+    setTimeout(function () {
         increase_credit(2);
         window.location.reload(true);
     }, 200);
