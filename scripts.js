@@ -30,7 +30,7 @@ function getuseridpass() {
         id.value = "Out of credits ";
         password.value = "Share to get credits";
         generate_but.innerText = "Generate";
-        id.style.color = "#f8f8f8";
+        id.style.color = "#18f8f8";
         password.style.color = "#18f8f8";
     } else {
         fetch(
