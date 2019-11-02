@@ -78,11 +78,11 @@ function copyToClipboard(id) {
     toast.innerText = id + " copied.";
     /* Copy the text inside the text field */
     document.execCommand("copy");
-    toast.style.visibility = "visible";
-    setTimeout(function () {
-        toast.style.visibility = "hidden";
-        toast.innerText = ""
-    }, 1000);
+    // toast.style.visibility = "visible";
+    // setTimeout(function () {
+    //     toast.style.visibility = "hidden";
+    //     toast.innerText = ""
+    // }, 1000);
 }
 
 function sharebutton() {
