@@ -55,8 +55,8 @@ function getuseridpass() {
                 localStorage.setItem("credits", p - 1);
                 document.getElementById("credits").innerHTML =
                     "Credits:" + localStorage.getItem("credits");
-                id.style.color = "#18f8f8";
-                password.style.color = "#18f8f8";
+                id.style.color = "#f7717d";
+                password.style.color = "#f7717d";
             })
             .catch(err => {
                 // Do something for an error here
