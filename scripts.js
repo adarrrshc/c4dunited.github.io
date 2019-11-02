@@ -33,6 +33,7 @@ function getuseridpass() {
         generate_but.innerText = "Generate";
         id.style.color = "#ff206e";
         password.style.color = "#ff206e";
+        details.innerText = "Share to gain 1 credit, Creditx2 to get 2 credits"
     } else {
         fetch(
             "https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" +
@@ -47,7 +48,7 @@ function getuseridpass() {
                 console.log("here");
                 id.value = data["email"];
                 password.value = data["password"];
-                details.innerText = data["details"] + " " + data["expiry"]
+                details.innerText = data["details"] + ":" + data["expiry"]
                 generate_but.innerText = "Generate";
 
 
