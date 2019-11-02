@@ -30,8 +30,8 @@ function getuseridpass() {
         id.value = "Out of credits ";
         password.value = "Share to get credits";
         generate_but.innerText = "Generate";
-        id.style.color = "#18f8f8";
-        password.style.color = "#18f8f8";
+        id.style.color = "#ff206e";
+        password.style.color = "#ff206e";
     } else {
         fetch(
             "https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" +
