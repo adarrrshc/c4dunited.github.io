@@ -86,15 +86,31 @@ function copyToClipboard(id) {
 }
 
 function sharebutton() {
-    window.open(
-        "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try."
-    );
+
+
+    if (window.confirm('To keep this service Alive, Please share with friends.\nYou Will Be Blessed.\nPlease Click "ok" ')) {
+        // They clicked Yes
+        window.open(
+            "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, Give it a try."
+        );
+
+        setTimeout(function () {
+            increase_credit(1);
+        }, 3000);
+    }
+    else {
+        // They clicked no
+        window.location.reload(true);
+
+    }
+
+
+
+
     //window.location.href =
     //  "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, //Give it a try.";
 
-    setTimeout(function () {
-        increase_credit(1);
-    }, 3000);
+
 }
 
 //Hi there! This website gives HOTSTAR PREMIUM for FREE!.Do check it out,Click here hotstarpremium.tk. #Hotstar
