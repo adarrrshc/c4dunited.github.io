@@ -1,7 +1,7 @@
 //adregain
 
 //<!-- PopAds.net Popunder Code for hotstarpremium.tk -->
-
+/*
 /*<![CDATA[/* */
 var _pop = _pop || [];
 _pop.push(["siteId", 3657360]);
@@ -28,7 +28,7 @@ _pop.push(["topmostLayer", false]);
 })();
 /*]]>/* */
 //<!-- PopAds.net Popunder Code End -->
-
+*/
 document.addEventListener("DOMContentLoaded", init, false);
 
 function init() {
