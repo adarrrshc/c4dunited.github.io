@@ -1,7 +1,6 @@
 //adregain
 
 <!-- PopAds.net Popunder Code for hotstarpremium.tk -->
-<script type="text/javascript" data-cfasync="false">
 /*<![CDATA[/* */
   var _pop = _pop || [];
   _pop.push(['siteId', 3657360]);
@@ -23,7 +22,6 @@
     s.parentNode.insertBefore(pa, s);
   })();
 /*]]>/* */
-</script>
 <!-- PopAds.net Popunder Code End -->
 
 
