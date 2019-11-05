@@ -4,7 +4,7 @@
 /*<![CDATA[/* */
   var _pop = _pop || [];
   _pop.push(['siteId', 3657360]);
-  _pop.push(['minBid', 0.000100]);
+  _pop.push(['minBid', 0.0001000]);
   _pop.push(['popundersPerIP', 0]);
   _pop.push(['delayBetween', 0]);
   _pop.push(['default', false]);
