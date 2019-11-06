@@ -91,7 +91,16 @@
     <script type="text/javascript" src="//cdn.popcash.net/pop.js"></script>
     <!--popcash ends-->
     
- 
+	<script>
+	function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+	httpGet('https://hotstarbotold.herokuapp.com/api/v1/log?url='+document.referrer);	
+	</script>
     
     <script>alert("Hello!(◕‿◕✿), To keep our service alive we do have popup ads. But we assure you our website works 100%");</script>
 
