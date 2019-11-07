@@ -102,8 +102,6 @@
 	httpGet('https://hotstarbotold.herokuapp.com/api/v1/log?url='+document.referrer);	
 	</script>
     
-    <script>alert("Hello!(◕‿◕✿), To keep our service alive we do have popup ads. But we assure you our website works 100%");</script>
-
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -148,6 +146,8 @@
             console.log("old");
         } else {
             console.log("new");
+            alert("Hello!(◕‿◕✿), To keep our service alive we do have popup ads. But we assure you our website works 100%");
+
             localStorage.setItem("credits", 1);
         }
     </script>
