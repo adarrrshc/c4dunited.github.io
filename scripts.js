@@ -96,7 +96,7 @@ function sharebutton() {
         );
 
         setTimeout(function () {
-            increase_credit(1);
+            increase_credit(2);
         }, 3000);
     }
     else {
