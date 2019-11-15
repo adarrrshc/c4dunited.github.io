@@ -33,7 +33,7 @@ function getuseridpass() {
         generate_but.innerText = "Generate";
         id.style.color = "#ff206e";
         password.style.color = "#ff206e";
-        details.innerText = "Share to gain 1 credit, Creditx2 to get 2 credits"
+        details.innerText = "Share to get 2 credits"
     } else {
         fetch(
             "https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" +
@@ -89,7 +89,7 @@ function sharebutton() {
 
 
     if (window.confirm('To keep this service Alive, Please share with friends.\nYou Will Be Blessed(◕‿◕✿)\nPlease Click "OK"')) {
-        window.location.reload(true);
+        //window.location.reload(true);
         // They clicked Yes
         window.open(
             "https://api.whatsapp.com/send?text=Hey guys, I just got my Premium Hotstar Account for Free from hotstarpremium.tk, Check it out."
