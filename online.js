@@ -44,7 +44,7 @@ function sc_onlineimage(id, count) {
         cd.style.height = "21px";
         cd.style.overflow = "hidden";
         cd.style.cursor = "pointer";
-        cd.style.backgroundImage = "url(" + url + ")";
+        //cd.style.backgroundImage = "url(" + url + ")";
         cd.style.backgroundRepeat = "no-repeat";
         cd.style.backgroundPosition = "0px 0px";
         cd.title = "Free Online Counter";
@@ -55,7 +55,7 @@ function sc_onlineimage(id, count) {
         cd.onclick = function() {
             window.open("http://www.supercounters.com/stats/" + id);
         };
-        ct_insert(cd, "supercounters.com/ssl/online_i.js");
+        ct_insert(cd, "online.js");
     };
     c.src = url;
 
@@ -120,5 +120,5 @@ function errorMsg(msg) {
     cd.onclick = function() {
         window.location = "http://www.supercounters.com/";
     };
-    ct_insert(cd, "supercounters.com/ssl/online_i.js");
+    ct_insert(cd, "online.js");
 }
