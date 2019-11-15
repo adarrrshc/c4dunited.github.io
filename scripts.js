@@ -97,6 +97,7 @@ function sharebutton() {
 
         setTimeout(function () {
             increase_credit(2);
+            window.location.reload(true);
         }, 3000);
     }
     else {
