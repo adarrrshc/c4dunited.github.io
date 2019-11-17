@@ -29,11 +29,11 @@ function getuseridpass() {
     console.log(p);
     if (p < 1) {
         id.value = "Out of credits ";
-        password.value = "Share to get credits";
+        password.value = "Click Get Credits";
         generate_but.innerText = "Generate";
         id.style.color = "#ff206e";
         password.style.color = "#ff206e";
-        details.innerText = "Share to get 2 credits"
+        details.innerText = "Click Get Credits Button and Share to Get Credits."
     } else {
         fetch(
             "https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" +
@@ -88,7 +88,7 @@ function copyToClipboard(id) {
 function sharebutton() {
 
 
-    if (window.confirm('To keep this service Alive, Please share with friends.\nYou Will Be Blessed(◕‿◕✿)\nPlease Click "OK"')) {
+    if (window.confirm('To keep this service Alive, Please share with friends.\nYou Will Be Blessed(◕‿◕✿)\nClick "OK" and Share to get Credits.')) {
         //window.location.reload(true);
         // They clicked Yes
         window.open(
