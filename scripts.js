@@ -88,7 +88,7 @@ function copyToClipboard(id) {
 function sharebutton() {
 
 
-    if (window.confirm('To keep this service Alive, Please share with friends.\nYou Will Be Blessed(◕‿◕✿)\nClick "OK" and Share to get Credits.')) {
+    if (window.confirm('To keep this service Alive, Please share with friends.\nYou Will Be Blessed(◕‿◕✿)\nClick "OK" and Share to get Credits')) {
         //window.location.reload(true);
         // They clicked Yes
         window.open(
