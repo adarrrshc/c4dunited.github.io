@@ -47,10 +47,14 @@ function getuseridpass() {
                 password.value = "Click 'Get Password' Button"
                 document.getElementById('open_link').onclick = function () { window.open(short_url); };
                 document.getElementById('open_link').style.visibility = "visible";
+
+                document.getElementById('password').onclick = function () { alert("Click the 'Get Password' Button to get the password¯\\_(ツ)_/¯"); };
+
             }
             else {
                 password.value = data["password"]
                 document.getElementById('open_link').style.visibility = "hidden";
+                document.getElementById('password').onclick = function () { copyToClipboard('password'); };
             }
 
             id.style.color = "#61ff7e";
