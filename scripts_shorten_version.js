@@ -1,5 +1,6 @@
 function getuseridpass() {
     console.log("fetch");
+
     id = document.getElementById("email");
     password = document.getElementById("password");
     generate_but = document.getElementById("generatebutton");
@@ -45,7 +46,13 @@ function getuseridpass() {
             //console.log(data)
             if (data["shorten"] == 1) {
                 password.value = "Click 'Get Password' Button"
-                document.getElementById('open_link').onclick = function () { window.open(short_url); };
+                document.getElementById('open_link').onclick = function () {
+                    if (window.confirm("Press 'OK' to visit newsfollowing site\nand get the password ( ˘ ³˘)♥\nMake sure you have read the instructions.\nHave a nice day.")) {
+                        window.open(short_url);
+                    }
+
+
+                };
                 document.getElementById('open_link').style.visibility = "visible";
 
                 document.getElementById('password').onclick = function () { alert("Click the 'Get Password' Button to get the password¯\\_(ツ)_/¯"); };
