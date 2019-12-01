@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
 fieldset {
   display: block;
   margin-inline-start: 2px;
@@ -16,10 +18,12 @@ fieldset {
 }
 
 
+
 html,body {
   overflow-x: hidden;
   background-color: #101820;
   color: #d8d8e0;
+  
   font-family: 'Roboto', sans-serif;
 }
 
@@ -34,6 +38,7 @@ label {
 
 
 .box {
+  margin: 10px; 
   border-color: #18f8f8;
   border-width: 0.1rem;
   border-radius: 8px;
