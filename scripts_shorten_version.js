@@ -50,13 +50,13 @@ function getuseridpass() {
 
 
                 document.getElementById('open_link').onclick = function () {
-                    if (window.confirm("Press 'OK' to visit newsfollowing site\nand get the password ( ˘ ³˘)♥\nMake sure you have read the instructions.\nHave a nice day.")) {
+                    if (window.confirm("Press 'OK' to visit earnload site\nand get the password ( ˘ ³˘)♥\nMake sure you have read the instructions.\nHave a nice day.")) {
                         window.open(short_url);
                     }
                 };
 
                 document.getElementById('password').onclick = function () {
-                    if (window.confirm("Press 'OK' to visit newsfollowing site\nand get the password ( ˘ ³˘)♥\nMake sure you have read the instructions.\nHave a nice day.")) {
+                    if (window.confirm("Press 'OK' to visit earnload site\nand get the password ( ˘ ³˘)♥\nMake sure you have read the instructions.\nHave a nice day.")) {
                         window.open(short_url);
                     }
                 };
