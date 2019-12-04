@@ -4,8 +4,12 @@ function getuseridpass() {
     id = document.getElementById("email");
     password = document.getElementById("password");
     generate_but = document.getElementById("generatebutton");
-    generate_but.innerText = "Generating..please wait..";
+    get_password_button = document.getElementById('open_link')
     details = document.getElementById("account_details");
+
+    generate_but.innerText = "Generating..please wait..";
+    get_password_button.innerText = ""
+    get_password_button.style.visibility = "hidden"
 
     //account type finding
     accounttype = document.getElementsByName("account_type");
@@ -42,11 +46,12 @@ function getuseridpass() {
 
             details.innerText = data["details"] + " : " + data["expiry"]
             generate_but.innerText = "Generate";
+            get_password_button.innerText = "Get Password"
 
             //console.log(data)
             if (data["shorten"] == 1) {
                 password.value = "Click 'Get Password' Button";
-                document.getElementById('open_link').style.visibility = "visible";
+                get_password_button.style.visibility = "visible";
 
 
                 document.getElementById('open_link').onclick = function () {
@@ -64,12 +69,13 @@ function getuseridpass() {
             }
             else {
                 password.value = data["password"]
-                document.getElementById('open_link').style.visibility = "hidden";
+                get_password_button.style.visibility = "hidden";
                 document.getElementById('password').onclick = function () { copyToClipboard('password'); };
             }
 
             id.style.color = "#61ff7e";
             password.style.color = "#61ff7e";
+            details.style.color = "#61ff7e"
         })
         .catch(err => {
             // Do something for an error here
@@ -78,6 +84,8 @@ function getuseridpass() {
             id.value = "Ooops";
             password.value = "Try Again";
             details.innerText = ""
+            id.style.color = "#ff206e";
+            password.style.color = "#ff206e";
 
         });
 }
