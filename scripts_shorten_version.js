@@ -31,7 +31,7 @@ function getuseridpass() {
     //fetch json
 
     fetch(
-        "https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" +
+        "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type=" +
         packdetails
     )
         .then(response => {
