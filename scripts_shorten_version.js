@@ -31,7 +31,7 @@ function getuseridpass() {
     //fetch json
 
     fetch(
-        "https://hotstarpremiumbot.herokuapp.com/api/v1/credentials?type=" +
+        "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type=" +
         packdetails
     )
         .then(response => {
@@ -82,10 +82,19 @@ function getuseridpass() {
             console.log("error");
             generate_but.innerText = "Generate";
             id.value = "Ooops";
+
             password.value = "Try Again";
-            details.innerText = ""
+            details.innerText = "Too much load on server.\nUse our telegram version of HotstarBot.\nClick 'Telegram Bot' button to visit."
             id.style.color = "#ff206e";
             password.style.color = "#ff206e";
+            details.style.color = "#ff206e"
+            get_password_button.innerText = "Telegram Bot"
+            get_password_button.style.visibility = "visible"
+            get_password_button.onclick = function () {
+                if (window.confirm("Press 'OK' to visit Telegram Bot version of HotstarBot\nand get Premium Account ( ˘ ³˘)♥\nHave a nice day.")) {
+                    window.open("https://t.me/hottstarbot");
+                }
+            }
 
         });
 }
