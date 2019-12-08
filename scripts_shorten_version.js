@@ -8,9 +8,9 @@ function getuseridpass() {
         if (a > 150) {
             x = 20000
         }
-        else if (x > 100) {
+        else if (a > 100) {
             x = 15000
-        } else if (x > 50) {
+        } else if (a > 50) {
             x = 10000
         } else {
             x = 5000
