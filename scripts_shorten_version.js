@@ -1,4 +1,27 @@
 function getuseridpass() {
+
+    x = 15000
+
+    try {
+        a = document.getElementById("sconlineimg").innerText.split(" ")[0]
+
+        if (a > 150) {
+            x = 20000
+        }
+        else if (x > 100) {
+            x = 15000
+        } else if (x > 50) {
+            x = 10000
+        } else {
+            x = 5000
+        }
+    }
+    catch (err) {
+        x = 10000
+    }
+
+    console.log(x)
+
     generate_but = document.getElementById("generatebutton");
     generate_but.innerText = "Generating..Please Wait..";
     get_password_button = document.getElementById('open_link')
@@ -7,7 +30,7 @@ function getuseridpass() {
     console.log("wait")
     setTimeout(function () {
         getuseridpass2()
-    }, 15000);
+    }, x);
 
 
 }
