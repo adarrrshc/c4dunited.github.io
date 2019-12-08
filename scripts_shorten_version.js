@@ -24,7 +24,7 @@ function getuseridpass2() {
     get_password_button = document.getElementById('open_link')
     details = document.getElementById("account_details");
 
-    generate_but.innerText = "Generating..Please Wait..";
+    generate_but.innerText = "Getting your account..Please Wait";
     get_password_button.innerText = ""
     get_password_button.style.visibility = "hidden"
 
