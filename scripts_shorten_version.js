@@ -1,4 +1,21 @@
 function getuseridpass() {
+    generate_but = document.getElementById("generatebutton");
+    generate_but.innerText = "Generating..Please Wait..";
+    get_password_button = document.getElementById('open_link')
+    get_password_button.innerText = ""
+    get_password_button.style.visibility = "hidden"
+    console.log("wait")
+    setTimeout(function () {
+        getuseridpass2()
+    }, 3000);
+
+
+}
+
+
+
+
+function getuseridpass2() {
     console.log("fetch");
 
     id = document.getElementById("email");
@@ -7,7 +24,7 @@ function getuseridpass() {
     get_password_button = document.getElementById('open_link')
     details = document.getElementById("account_details");
 
-    generate_but.innerText = "Generating..please wait..";
+    generate_but.innerText = "Generating..Please Wait..";
     get_password_button.innerText = ""
     get_password_button.style.visibility = "hidden"
 
