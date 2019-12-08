@@ -7,7 +7,7 @@ function getuseridpass() {
     console.log("wait")
     setTimeout(function () {
         getuseridpass2()
-    }, 6000);
+    }, 10000);
 
 
 }
@@ -114,7 +114,11 @@ function getuseridpass2() {
             }
 
         });
+
 }
+
+
+
 
 
 function copyToClipboard(id) {
