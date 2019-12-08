@@ -7,7 +7,7 @@ function getuseridpass() {
     console.log("wait")
     setTimeout(function () {
         getuseridpass2()
-    }, 10000);
+    }, 15000);
 
 
 }
