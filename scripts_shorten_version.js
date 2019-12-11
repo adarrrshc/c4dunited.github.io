@@ -6,10 +6,10 @@ function getuseridpass() {
         a = document.getElementById("sconlineimg").innerText.split(" ")[0]
 
         if (a > 150) {
-            x = 10000
+            x = 5000
         }
         else if (a > 100) {
-            x = 5000
+            x = 3000
         } else if (a > 50) {
             x = 3000
         } else {
@@ -17,7 +17,7 @@ function getuseridpass() {
         }
     }
     catch (err) {
-        x = 10000
+        x = 5000
     }
 
     console.log(x)
