@@ -6,14 +6,14 @@ function getuseridpass() {
         a = document.getElementById("sconlineimg").innerText.split(" ")[0]
 
         if (a > 150) {
-            x = 20000
+            x = 10000
         }
         else if (a > 100) {
-            x = 15000
-        } else if (a > 50) {
-            x = 10000
-        } else {
             x = 5000
+        } else if (a > 50) {
+            x = 3000
+        } else {
+            x = 2000
         }
     }
     catch (err) {
