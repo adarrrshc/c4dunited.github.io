@@ -1,3 +1,6 @@
+
+var url = ""
+
 function getuseridpass() {
 
     x = 15000
@@ -32,6 +35,13 @@ function getuseridpass() {
         getuseridpass2()
     }, x);
 
+    var d = new Date();
+    d = d.toString().split(" ")[4].split(":")[2]
+    if (d % 2 == 0) {
+        url = "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="
+    } else {
+        url = "http://139.59.13.187:8089/api/v2/credentials?type="
+    }
 
 }
 
@@ -67,12 +77,9 @@ function getuseridpass2() {
     //maybe hide ???
     divv = document.getElementById("credentials");
     divv.style.visibility = "visible";
-
     //fetch json
-
     fetch(
-        //"https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="+packdetails
-        "http://139.59.13.187:8089/api/v2/credentials?type="+packdetails
+        url + packdetails
     )
         .then(response => {
             console.log(response);
