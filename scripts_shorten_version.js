@@ -38,7 +38,8 @@ function getuseridpass() {
     var d = new Date();
     d = d.toString().split(" ")[4].split(":")[2]
     if (d % 2 == 0) {
-        url = "http://139.59.13.187:8086/api/v2/credentials?type="
+        //url = "http://139.59.13.187:8086/api/v2/credentials?type="
+        url = "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="
     } else {
         url = "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="
     }
