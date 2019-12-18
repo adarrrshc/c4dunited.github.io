@@ -128,13 +128,13 @@ function getuseridpass2() {
             // Do something for an error here
             console.log("error");
             generate_but.innerText = "Generate";
-            id.value = "Ooops";
+            id.value = "visit";
 
-            password.value = "Try Again";
-            details.innerText = "Too much load on server.\nUse our telegram version of HotstarBot.\nClick 'Telegram Bot' button to visit."
+            password.value = "telegram bot";
+            details.innerText = "Use our telegram version of HotstarBot.\nClick 'Telegram Bot' button to visit."
             id.style.color = "#ff206e";
             password.style.color = "#ff206e";
-            details.style.color = "#ff206e"
+            details.style.color = "#42e6a4"
             get_password_button.innerText = "Telegram Bot"
             get_password_button.style.visibility = "visible"
             get_password_button.onclick = function () {
