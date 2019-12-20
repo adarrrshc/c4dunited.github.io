@@ -41,7 +41,7 @@ function getuseridpass() {
         //url = "http://139.59.13.187:8086/api/v2/credentials?type="
         url = "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="
     } else {
-        url = "http://159.203.174.83:8089/api/v2/credentials?type="
+        url = "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="
     }
 
 }
