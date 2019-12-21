@@ -115,7 +115,7 @@ function getuseridpass2() {
     divv.style.visibility = "visible";
     //fetch json
     fetch(
-        url + packdetails
+        url + packdetails + "&id=" + client.toString()
     )
         .then(response => {
             console.log(response);
