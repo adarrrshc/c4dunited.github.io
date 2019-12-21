@@ -1,5 +1,43 @@
-
 var url = ""
+var fetch_url = ""
+
+function load_balance() {
+
+    fetch("https://jsonblob.com/api/jsonBlob/f99b68e2-23d1-11ea-8ada-1f523035cc30", {
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        }
+    }).then(data => data.json())
+        .then(data => {
+            if (data["url1"] < data["url2"]) {
+                fetch_url = "first url!"
+                data["url1"] += 1
+            } else {
+                fetch_url = "second url!"
+                data["url2"] += 1
+            }
+            console.log(fetch_url)
+            return data
+        }).then(json_data => {
+
+            fetch("https://jsonblob.com/api/jsonBlob/f99b68e2-23d1-11ea-8ada-1f523035cc30", {
+                //body: "{\"people\":[\"fred\", \"mark\", \"andrew\"]}",
+                body: JSON.stringify(json_data),
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
+                },
+                method: "PUT"
+            })
+
+            console.log(json_data);
+        }
+
+        );
+
+
+}
 
 function getuseridpass() {
 
@@ -32,6 +70,7 @@ function getuseridpass() {
     get_password_button.style.visibility = "hidden"
     console.log("wait")
     setTimeout(function () {
+        load_balance()
         getuseridpass2()
     }, x);
 
@@ -47,10 +86,13 @@ function getuseridpass() {
 }
 
 
-
-
 function getuseridpass2() {
     console.log("fetch");
+
+    //get fingerprint
+    var client = new ClientJS();
+    client = client.getFingerprint();
+    console.log(client)
 
     id = document.getElementById("email");
     password = document.getElementById("password");
@@ -161,11 +203,7 @@ function copyToClipboard(id) {
     toast.innerText = id + " copied.";
     /* Copy the text inside the text field */
     document.execCommand("copy");
-    // toast.style.visibility = "visible";
-    // setTimeout(function () {
-    //     toast.style.visibility = "hidden";
-    //     toast.innerText = ""
-    // }, 1000);
+
 }
 
 function sharebutton() {
@@ -190,30 +228,6 @@ function sharebutton() {
     }
 
 
-
-
-    //window.location.href =
-    //  "https://api.whatsapp.com/send?text=Hey guys, This website gives hotstar premium for free. http://hotstarpremium.tk, //Give it a try.";
-
-
 }
 
-//Hi there! This website gives HOTSTAR PREMIUM for FREE!.Do check it out,Click here hotstarpremium.tk. #Hotstar
 
-function twoxcredit() {
-    //window.open("https://api.whatsapp.com/send?text=t.me/projectupdates");
-    //window.location.href = "http://deloplen.com/afu.php?zoneid=2905837";
-    //window.open("http://deloplen.com/afu.php?zoneid=2905837");
-
-    setTimeout(function () {
-        increase_credit(2);
-        window.location.reload(true);
-    }, 200);
-}
-
-function increase_credit(c) {
-    var p = parseInt(localStorage.getItem("credits")) + c;
-    localStorage.setItem("credits", p);
-    document.getElementById("credits").innerHTML =
-        "Credits:" + localStorage.getItem("credits");
-}
