@@ -25,7 +25,6 @@ function load_balance() {
         }).then(json_data => {
 
             fetch("https://jsonblob.com/api/jsonBlob/f99b68e2-23d1-11ea-8ada-1f523035cc30", {
-                //body: "{\"people\":[\"fred\", \"mark\", \"andrew\"]}",
                 body: JSON.stringify(json_data),
                 headers: {
                     Accept: "application/json",
@@ -35,9 +34,9 @@ function load_balance() {
             })
 
             console.log(json_data);
-        }
-
-        );
+        }).catch(err => {
+            url = fetch_urls["url1"]
+        });
 
 
 }
