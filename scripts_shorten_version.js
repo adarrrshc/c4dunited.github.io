@@ -1,5 +1,8 @@
 var url = ""
-var fetch_url = ""
+var fetch_urls = {
+    "url1": "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type=",
+    "url2": "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="
+}
 
 function load_balance() {
 
@@ -11,13 +14,13 @@ function load_balance() {
     }).then(data => data.json())
         .then(data => {
             if (data["url1"] < data["url2"]) {
-                fetch_url = "first url!"
+                url = fetch_urls["url1"]
                 data["url1"] += 1
             } else {
-                fetch_url = "second url!"
+                url = fetch_urls["url2"]
                 data["url2"] += 1
             }
-            console.log(fetch_url)
+            console.log(url)
             return data
         }).then(json_data => {
 
@@ -69,19 +72,10 @@ function getuseridpass() {
     get_password_button.innerText = ""
     get_password_button.style.visibility = "hidden"
     console.log("wait")
+    load_balance()
     setTimeout(function () {
-        load_balance()
         getuseridpass2()
     }, x);
-
-    var d = new Date();
-    d = d.toString().split(" ")[4].split(":")[2]
-    if (d % 2 == 0) {
-        //url = "http://139.59.13.187:8086/api/v2/credentials?type="
-        url = "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="
-    } else {
-        url = "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="
-    }
 
 }
 
