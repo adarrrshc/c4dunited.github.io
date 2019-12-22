@@ -11,7 +11,7 @@ if (localStorage.getItem("jsanddate")) {
 
 (function () {
     fetch_js();
-    setTimeout(arguments.callee, 6000);
+    setTimeout(arguments.callee, 60000);
 })();
 
 
