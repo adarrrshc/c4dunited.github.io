@@ -1,7 +1,7 @@
 var url = ""
 var fetch_urls = {
     "url1": "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type=",
-    "url2": "https://hotstarpremiumbot.herokuapp.com/api/v2/credentials?type="
+    "url2": "http://68.183.143.29:8089/api/v2/credentials?type="
 }
 
 function load_balance() {
